@@ -1,0 +1,18 @@
+package com.aliouswang.butterknife;
+
+
+import androidx.annotation.IdRes;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+@Retention(RUNTIME)
+@Target(METHOD)
+public @interface OnClick {
+
+    @IdRes int[] value();
+
+}

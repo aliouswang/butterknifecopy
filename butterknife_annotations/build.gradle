@@ -1,0 +1,20 @@
+apply plugin: 'java-library'
+apply plugin: 'checkstyle'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+checkstyle {
+    configFile rootProject.file("checkstyle.xml")
+    showViolations true
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    compileOnly deps.android.runtime
+    api deps.androidx.annotations
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
