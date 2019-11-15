@@ -1,1 +1,1 @@
-include ':app', ':butterknife_annotations', ':butterknife_runtime'
+include ':app', ':butterknife_annotations', ':butterknife_runtime', ':butterknife_compiler'
